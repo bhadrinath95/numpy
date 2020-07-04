@@ -1,0 +1,18 @@
+{% extends "base.html "%}
+{% block content %}
+
+<h3>{{ topic }}</h3>
+
+{% for type in types %}
+{% if type.heading %}
+<h4>{{ type.heading }}</h4>
+{% endif %}
+<p>{{ type.description|linebreaks }}</p>
+<h5>Example</h5>
+{{ type.example|linebreaks }}
+<hr />
+{% endfor %}
+
+<a href='http://127.0.0.1:8000/numpy'>Click here to go back to Index page </a>
+
+{% endblock content %}

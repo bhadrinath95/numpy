@@ -1,0 +1,19 @@
+{% extends "base.html "%}
+{% block content %}
+
+<h3>NumPy</h3>
+
+<ul>
+{% for pt in pts %}
+<li>{{ pt }}</li>
+{% endfor %}
+</ul>
+
+<h4>Example</h4>
+<p>
+{{ example  |linebreaks }}
+</p>
+
+<a href='http://127.0.0.1:8000/numpy'>Click here to go back to Index page </a>
+
+{% endblock content %}
